@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# requirements mplayer
+# apt-get install mplayer
+
 if [ $# = "1" ] ; then
   
   if [ $1 = "superrugby" ] ; then
@@ -38,5 +41,6 @@ else
 
   echo "only one argument needed"
   echo "Options 5fm, kfm, capetalk, radio2000"
+  echo "ex ./liveaudio <option>"
 
 fi
