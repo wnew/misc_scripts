@@ -36,11 +36,15 @@ if [ $# = "1" ] ; then
   if [ $1 = "uct" ] ; then
     mplayer "http://188.138.56.4:8130"
   fi
+  
+  if [ $1 = "rsg" ] ; then
+    mplayer "http://196.35.64.36/rsg_22"
+  fi
 
 else
 
-  echo "only one argument needed"
-  echo "Options 5fm, kfm, capetalk, radio2000"
   echo "ex ./liveaudio <option>"
+  echo "only one argument needed"
+  echo "Options 5fm, kfm, highveld, capetalk, radio2000, rsg, superrugby, uct"
 
 fi
