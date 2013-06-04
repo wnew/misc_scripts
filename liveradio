@@ -7,7 +7,6 @@ if [ $# = "1" ] ; then
   
   if [ $1 = "superrugby" ] ; then
     mplayer "http://radionetworknz.streamguys.com/rsonline/rsonline.stream/playlist.m3u8"
-    #mplayer "http://85.10.196.144/capetalk-live"
   fi
 
   if [ $1 = "capetalk" ] ; then
@@ -19,6 +18,10 @@ if [ $# = "1" ] ; then
     mplayer "http://196.35.68.110/5fm_22"
   fi
 
+  if [ $1 = "safm" ] ; then
+    mplayer "http://196.35.68.110/safm_22"
+  fi
+  
   if [ $1 = "radio2000" ] ; then
     mplayer "http://216.246.37.51/pbs-radio2000-live"
     #mplayer "rtsp://196.35.68.246/radio2000-live"
@@ -45,6 +48,6 @@ else
 
   echo "ex ./liveaudio <option>"
   echo "only one argument needed"
-  echo "Options 5fm, kfm, highveld, capetalk, radio2000, rsg, superrugby, uct"
+  echo "Options 5fm, kfm, highveld, capetalk, radio2000, rsg, superrugby, uct, safm"
 
 fi
