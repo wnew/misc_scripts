@@ -1,18 +1,18 @@
-import os, urllib
+import os, urllib, sys
+from optparse import OptionParser
 
-packages = ["RS915893595CH",
-            "RC872541047HK",
-            "RC740667074CN",
-            "RB595183543CN",
-            "RF207929317SG",
-            "RB596971431CN",
-            "RC464416917CN",
-            "RC266409604CN",
-            "RF207687615SG",
-            "RC463879428CN",
-            "RB596903697CN",
-            "RC266408484CN",
-            "RB596903079CN"]
+p = OptionParser()
+opts, args = p.parse_args(sys.argv[1:])
+
+if args==[]:
+   print "Enter a file to read the tracking numbers from"
+   exit()
+
+
+packages = []
+
+with open(args[0],'r') as f:
+    packages = f.readlines()
 
 url = 'http://sms.postoffice.co.za/TrackingParcels/Parcel.aspx?id='
 
